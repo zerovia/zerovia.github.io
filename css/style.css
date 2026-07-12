@@ -12,8 +12,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; text-de
 .site-header .wrapper { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
 .site-title { color: #424242; font-size: 23px; font-weight: 400; line-height: 56px; letter-spacing: -.8px; }
 .site-nav { display: flex; align-items: center; gap: 20px; }
-.page-link { color: #111; padding-bottom: 3px; }
-.page-link.is-current { color: var(--accent); border-bottom: 1px solid var(--accent); }
+.page-link { color: #111; padding-bottom: 3px; border-bottom: 1px solid transparent; text-decoration: none; transition: color .15s ease, border-color .15s ease; }
+.page-link:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+.page-link.is-current { color: var(--accent); border-bottom-color: var(--accent); }
 .nav-cv, .footer-cv { display: inline-block; background: #111; color: #fff !important; padding: 7px 12px; line-height: 1; text-decoration: none !important; }
 .nav-cv:hover, .footer-cv:hover { background: var(--accent); color: #fff; }
 .page-content { padding: 40px 0; min-height: 60vh; }
