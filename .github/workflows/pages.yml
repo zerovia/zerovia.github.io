@@ -32,9 +32,9 @@ jobs:
           body = doc.read_text(encoding='utf-8')
           result = body
           if env_a:
-              result = result.replace('<!-- 596d485f0dff003335a1 -->', env_a)
+              result = result.replace('<!-- 692775afbf1e4d4c66a96da1ad5a9fe89e6e4a9c023cf5 -->', env_a)
           if env_b:
-              result = result.replace('<!--  -->', env_b)
+              result = result.replace('<!-- db979797e3ad26c1dc08 -->', env_b)
           if result == body and (env_a or env_b):
               sys.exit(1)
           if result != body:
